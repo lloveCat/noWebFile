@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--  meta 相当于网页编码  -->
+    <meta charset="UTF-8">
+    <title>addNote</title>
+</head>
+<link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="/public/css/bootstrap-theme.css" />
+
+<script src="/public/js/jquery.js"></script>
+<script src="/public/js/bootstrap.js"></script>
+<script src="/public/js/addNote.js"></script>
+
+<!--<script>-->
+<!--function doSubmit() {-->
+<!--var httpRequest = new XMLHttpRequest();-->
+<!--var name = document.getElementById("note-form-input").value;-->
+<!--var noteTxt = document.getElementById("note-form-textarea").value;-->
+<!--alert(name + '   ' + noteTxt)-->
+<!--if (isNullString(name) || isNullString(noteTxt)) {-->
+<!--alert('name or note is null')-->
+<!--return;-->
+<!--}-->
+<!--httpRequest.open("GET", "http://localhost:3000/doAddNote", false)-->
+<!--var requestBody = {-->
+<!--name: name,-->
+<!--noteTxt: noteTxt-->
+<!--}-->
+<!--httpRequest.send(requestBody);-->
+<!--if (httpRequest.status === 200) {-->
+<!--alert('' + httpRequest.responseText)-->
+<!--}-->
+<!--}-->
+
+<!--function isNullString(s) {-->
+<!--if (s === null || s.length === 0 || s.trim().length === 0) {-->
+<!--return true;-->
+<!--}-->
+<!--return false;-->
+<!--}-->
+<!--</script>-->
+<body>
+<a href="/index.html" class="m-3"><h2>返回首页</h2></a>
+<div style="width: 400px;" class="m-5">
+<form name="addNoteForm" id="note-form" class="form-horizontal">
+    <label class="sr-only" for="note-form-input">name</label>
+    <input class="form-control m-2" id="note-form-input" type="text" placeholder="请输入姓名" minlength="2" maxlength="6">
+    <label class="sr-only" for="note-form-textarea">留言内容</label>
+    <textarea class="form-control m-2" id="note-form-textarea" placeholder="请输入留言内容" minlength="10" maxlength="200"></textarea>
+</form>
+<button class="btn btn-primary" onclick="doSubmit1()" >留言</button>
+</div>
+</body>
+</html>

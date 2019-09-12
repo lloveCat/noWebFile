@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!-- 原始web art模板使用-->
+<!--<script src="template-web.js"></script>-->
+<!--<script type="text/template" id="hahaha">-->
+<!-- hello {{name}}-->
+<!--</script>-->
+<!--<script>-->
+<!--    var foo = template('hahaha', {-->
+<!--        name: 'laihuihui'-->
+<!--    })-->
+<!--    console.log(foo) //hello laihuihui-->
+<!--</script>-->
+<body>
+<script>
+<!-- art模板引擎只认识{{}}   -->
+    var foo = '{{ name }}'
+</script>
+<h1>hello {{ name }}</h1>
+<h2>I am {{ age }} year old</h2>
+<table>
+<!--    -_- -->
+    {{ each files }} <tr><td> {{ $value }} </td></tr> {{ /each }}
+</table>
+</body>
+</html>
